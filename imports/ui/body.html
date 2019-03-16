@@ -1,0 +1,32 @@
+<body>
+  <div class="container">
+    <header>
+      <h1>Task List and Todo List</h1>
+    </header>
+    <p>
+      See your list of tasks and todos right here!
+    </p>
+ 
+    <h3>Task List</h3>
+    <ul>
+      {{#each tasks}}
+        {{> task}}
+      {{/each}}
+    </ul>
+  
+    <h3>Todo List</h3>
+    <ul>
+      {{#each todos}}
+        {{> todo}}
+      {{/each}}
+    </ul>
+  </div>
+</body>
+
+<template name="task">
+  <li>{{line}}</li>
+</template>
+
+<template name="todo">
+  <li>{{text}}</li>
+</template>
